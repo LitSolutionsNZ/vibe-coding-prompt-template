@@ -14,11 +14,10 @@ This guide details a structured workflow using Google’s Gemini tools and an AI
 
 ## Step 1: Generate Deep Research (Gemini Website)
 
-Use [Gemini Website](https://gemini.google.com/app) with your research prompt template to generate a comprehensive research report. Focus on:
-* Target audience and their pain points.
-* Existing solutions and their limitations.
-* Market gaps and opportunities.
-* Technical feasibility (e.g., APIs, tools available).
+Use [Gemini Website](https://gemini.google.com/app) with your research prompt template to generate a comprehensive research report.
+* The prompt will ask you a multitude of questions about what you want.
+* After you answer, it'll then give you a deep research prompt that then you'll put into Gemini Deep Research with 2.5 Pro.
+* P.S. OpenAI and Perplexity works as well, but I prefer Gemini.
 
 **Goal:** Obtain foundational background information to inform the PRD.
 **Output:** Research findings document (e.g., `research-report.md`).
