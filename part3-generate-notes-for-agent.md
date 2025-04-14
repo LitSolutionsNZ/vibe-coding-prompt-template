@@ -1,38 +1,60 @@
-## Part III - Generate MVP Application Code
+# Part III: Generate NOTES.md for AI IDE Agent
 
-**Goal:** Generate the complete, runnable source code for the Minimum Viable Product (MVP) based on the provided research summary, Product Requirements Document (PRD), and Technical Design Document (Tech Design Doc).
+**Goal:** To generate a structured `NOTES.md` file that summarizes key information and provides a high-level implementation plan based on the provided Product Requirements Document (PRD) and Technical Design Document (Tech Design Doc). This `NOTES.md` file will serve as the primary guide for an AI IDE agent (like GitHub Copilot Chat or Cursor) during the initial code generation phase.
 
-**AI Role:** Act as a Senior Software Engineer. Your task is to synthesize the information in the provided summary and referenced documents to build the functional MVP application code.
+**AI Role:** Act as a meticulous Technical Project Manager. Your task is to thoroughly analyze the referenced PRD and Tech Design Doc files and synthesize them into a clear, actionable `NOTES.md` file formatted for an AI agent.
 
-**Inputs & References:**
+**Reference Documents:**
 
-*   **Deep Research Findings Summary:**
-    *   [ USER: PASTE THE CONCISE SUMMARY OR KEY FINDINGS FROM THE PART I DEEP RESEARCH OUTPUT HERE. Focus on goals, target audience insights, and critical context not fully captured in the PRD/Tech Design Doc. Keep it brief to respect context limits. ]
-
-*   **Product Requirements Document (PRD):**
-    *   Please refer to the attached/provided PRD file (`[Specify PRD Filename Here, e.g., PRD-MVP.md]`). This document contains the finalized requirements, user stories, features, and scope for the MVP. **This is the primary source for *what* to build.**
-
-*   **Technical Design Document (Tech Design Doc):**
-    *   Please refer to the attached/provided Tech Design Doc file (`[Specify Tech Design Doc Filename Here, e.g., Tech-Design-MVP.md]`). This document outlines the agreed-upon tech stack, architecture, data flow, and implementation approach. **This is the primary source for *how* to build it.**
+*   **Product Requirements Document (PRD):** Please read the attached/provided PRD file (`[Specify PRD Filename Here, e.g., PRD-MVP.md]`). This contains the *what* – requirements, user stories, features, scope.
+*   **Technical Design Document (Tech Design Doc):** Please read the attached/provided Tech Design Doc file (`[Specify Tech Design Doc Filename Here, e.g., Tech-Design-MVP.md]`). This contains the *how* – tech stack, architecture, data flow, implementation approach.
 
 **Instructions for AI:**
 
-1.  **Analyze Inputs:** Carefully read the provided Research Findings Summary and understand the referenced PRD and Tech Design Doc files.
-2.  **Prioritize PRD & Tech Design:** Strictly adhere to the requirements, features, platform, UI concepts, tech stack, architecture, data flow, and implementation details specified in the PRD and Tech Design Doc. If there's a conflict between the Research Summary and the PRD/Tech Design, the PRD/Tech Design take precedence.
-3.  **Use Research for Context:** Leverage the Deep Research Findings Summary for overall context, understanding user needs, and informing subtle implementation details where the PRD/Tech Design are not specific, but **do not** let it override explicit specifications in the PRD/Tech Design.
-4.  **Focus on MVP:** Implement *only* the features listed as 'Core Features' or 'Must-Have' in the PRD. Exclude anything marked as 'Out of Scope'.
-5.  **Generate Code:** Produce clean, well-commented, and runnable code for the complete MVP application according to the Tech Design Doc specifications. Use appropriate file blocks for each distinct file (e.g., HTML, CSS, Python script).
-6.  **Completeness:** Ensure all necessary code components are included for the application to run based on the specified tech stack.
-7.  **Error Handling:** Implement basic error handling as described in the Tech Design Doc/PRD.
-8.  **Comments:** Add clear comments explaining the code logic, especially for complex sections or non-obvious decisions.
+1.  **Analyze Thoroughly:** Carefully read and understand *both* the PRD and Tech Design Doc in their entirety.
+2.  **Synthesize Information:** Extract and combine relevant information from both documents.
+3.  **Structure Output:** Generate a markdown file named `NOTES.md` containing the following sections:
+    *   **`## Project Overview`**:
+        *   `Product Name`: (From PRD)
+        *   `Core Purpose`: (Concise summary based on PRD)
+        *   `MVP Goal`: (Primary goal for the MVP, from PRD)
+        *   `Target Audience`: (From PRD)
+    *   **`## Technical Specifications (from Tech Design Doc)`**:
+        *   `Platform`:
+        *   `Tech Stack (Frontend)`:
+        *   `Tech Stack (Backend/Core)`:
+        *   `Key Libraries/APIs`:
+        *   `Architecture Overview`: (Brief description or key components)
+        *   `Data Handling Notes`: (Key points on privacy/storage)
+        *   `Error Handling Approach`: (Brief summary)
+    *   **`## Core MVP Features & Implementation Plan (from PRD & Tech Design Doc)`**:
+        *   For *each* core MVP feature listed in the PRD:
+            *   Create a sub-section: `### Feature: [Feature Name]`
+            *   `Description`: (From PRD)
+            *   `Key Acceptance Criteria/User Story`: (Link to main user story if applicable, or list key criteria)
+            *   `Technical Implementation Notes`: (Summarize approach from Tech Design Doc, mention key components/files involved if specified)
+            *   `Agent Implementation Steps (Suggested)`: (Provide a *high-level*, logical checklist for the agent, e.g., "1. Create function X in file Y.py", "2. Add route Z in main app file", "3. Implement UI element based on UI concept")
+    *   **`## UI/UX Concept (from PRD)`**:
+        *   Brief description of the look, feel, or key elements.
+    *   **`## Out of Scope for MVP (from PRD)`**:
+        *   List features explicitly excluded.
+    *   **`## Key Agent Instructions`**:
+        *   "Agent: Please generate the MVP codebase based on the details above."
+        *   "Prioritize implementing the features exactly as specified in the 'Core MVP Features' section."
+        *   "Strictly adhere to the 'Technical Specifications' regarding platform, stack, and architecture."
+        *   "Refer to the full PRD (`[PRD Filename]`) and Tech Design Doc (`[Tech Design Doc Filename]`) files in the project root for complete details if needed."
+        *   "Create files and directory structures as logically required by the Tech Design Doc and implementation plan."
+        *   "Add comments to explain complex logic."
+
+4.  **Clarity and Conciseness:** Ensure the generated `NOTES.md` is clear, well-organized, and provides actionable guidance for the AI agent. Use markdown formatting effectively.
+5.  **Filename Placeholders:** Remember to include the actual filenames of the PRD and Tech Design Doc in the "Key Agent Instructions" section where indicated.
 
 **Output:**
 
-*   The complete source code for the MVP application, organized into separate file blocks (e.g., ```html name=index.html ... ```, ```python name=main.py ... ```).
-*   Brief setup or running instructions *only if* absolutely necessary beyond standard practices for the specified tech stack (e.g., specific API keys needed, non-standard build steps).
+*   The complete content for the `NOTES.md` file, formatted in markdown.
 
 ---
 
 **Execution Request:**
 
-Please generate the MVP application code based on the provided Research Summary and the referenced PRD and Tech Design Doc files. Remember to prioritize the PRD and Tech Design Doc for specific requirements and implementation details.
+Please generate the `NOTES.md` content by analyzing the referenced PRD (`[Specify PRD Filename Here]`) and Tech Design Doc (`[Specify Tech Design Doc Filename Here]`) files according to the instructions above.
