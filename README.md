@@ -24,7 +24,7 @@ This guide details a structured workflow using Google’s Gemini tools and an AI
 *   ### Disclaimer: If Gemini attempts to create a deep research report with **`part1-deepresearch.md`** prompt, press **Try again without Deep Research** below the Deep Research window.
 *   Use the [Gemini Website](https://gemini.google.com/app) with the **`part1-deepresearch.md`** prompt template.
 *   Follow the instructions within the prompt to define your research scope collaboratively, and complete the Q&A process.
-*   Run the resulting research prompt on Gemini.
+*   After creating a Deep Research prompt with the Q&A process done, run the resulting research prompt on Gemini.
 *   **Save the key findings** from the deep research output.
 
 ---
