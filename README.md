@@ -19,7 +19,7 @@ This guide details a structured workflow using Google’s Gemini tools and an AI
 * For PRD/Tech Design Doc/NOTES.md Generation: Gemini 2.5 Pro (or latest powerful model)
 * For Code Generation/Refinement: Your IDE's integrated AI Agent (Copilot Chat, Cursor, etc.)
 
-## Step 1: Generate Deep Research (Gemini Website)
+## Step 1: [Generate Deep Research (Gemini Website)](https://github.com/KhazP/vibe-coding-prompt-template/blob/main/part1-deepresearch.md)
 
 * ### Disclaimer: If Gemini attempts to create a deep research report with **`part1-deepresearch.md`** prompt, press **Try again without Deep Research** below the Deep Research window.
 * Use the [Gemini Website](https://gemini.google.com/app) with the **`part1-deepresearch.md`** prompt template.
@@ -29,7 +29,7 @@ This guide details a structured workflow using Google’s Gemini tools and an AI
 
 ---
 
-## Step 2: Generate PRD & Tech Design Doc (Gemini App / AI Studio)
+## Step 2: [Generate PRD & Tech Design Doc (Gemini App / AI Studio)](https://github.com/KhazP/vibe-coding-prompt-template/blob/main/part2-interactive-prd-tech-design.md)
 
 1.  Execute the **`part2-interactive-prd-tech-design.md`** prompt template in Gemini App or aistudio.google.com. Complete the Q&A process.
 2.  Review the generated PRD and Tech Design Doc for accuracy.
@@ -37,7 +37,7 @@ This guide details a structured workflow using Google’s Gemini tools and an AI
 
 ---
 
-## Step 3: Generate IDE Agent Guide (`NOTES.md`) (Gemini App / AI Studio)
+## Step 3: [Generate IDE Agent Guide (`NOTES.md`) (Gemini App / AI Studio)](https://github.com/KhazP/vibe-coding-prompt-template/blob/main/part3-generate-notes-for-agent.md)
 
 1.  Use the **`part3-generate-notes-for-agent.md`** prompt template in Gemini App or AI Studio.
 2.  **Configure the Prompt:** Update the filename placeholders within the prompt to match the actual names of your PRD and Tech Design Doc files saved in Step 2.
