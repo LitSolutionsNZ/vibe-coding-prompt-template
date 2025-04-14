@@ -14,9 +14,8 @@ This guide details a structured workflow using Google’s Gemini tools and an AI
 ---
 ## Recommended LLM:
 
-For Deep Research: Gemini Deep Research with 2.5 Pro
-For the rest: Gemini 2.5 Pro
----
+* For Deep Research: Gemini Deep Research with 2.5 Pro
+* For the rest: Gemini 2.5 Pro
 
 ## Step 1: Generate Deep Research (Gemini Website)
 
