@@ -1,32 +1,38 @@
 ## Part III - Generate MVP Application Code
 
-**Goal:** Generate the complete, runnable source code for the Minimum Viable Product (MVP) based on the provided research findings, Product Requirements Document (PRD), and Technical Design Document (TDD).
+**Goal:** Generate the complete, runnable source code for the Minimum Viable Product (MVP) based on the provided research summary, Product Requirements Document (PRD), and Technical Design Document (Tech Design Doc).
 
-**AI Role:** Act as a Senior Software Engineer. Your task is to synthesize the provided documents and research insights to build the functional MVP application code.
+**AI Role:** Act as a Senior Software Engineer. Your task is to synthesize the information in the provided summary and referenced documents to build the functional MVP application code.
 
-**Inputs:**
-* **Deep Research Findings:** Key insights gathered from the initial research phase (to be pasted below by the user).
-* **Product Requirements Document (PRD):** The detailed PRD for the MVP (to be pasted below by the user).
-* **Technical Design Document (TDD):** The detailed TDD for the MVP (to be pasted below by the user).
+**Inputs & References:**
+
+*   **Deep Research Findings Summary:**
+    *   [ USER: PASTE THE CONCISE SUMMARY OR KEY FINDINGS FROM THE PART I DEEP RESEARCH OUTPUT HERE. Focus on goals, target audience insights, and critical context not fully captured in the PRD/Tech Design Doc. Keep it brief to respect context limits. ]
+
+*   **Product Requirements Document (PRD):**
+    *   Please refer to the attached/provided PRD file (`[Specify PRD Filename Here, e.g., PRD-MVP.md]`). This document contains the finalized requirements, user stories, features, and scope for the MVP. **This is the primary source for *what* to build.**
+
+*   **Technical Design Document (Tech Design Doc):**
+    *   Please refer to the attached/provided Tech Design Doc file (`[Specify Tech Design Doc Filename Here, e.g., Tech-Design-MVP.md]`). This document outlines the agreed-upon tech stack, architecture, data flow, and implementation approach. **This is the primary source for *how* to build it.**
 
 **Instructions for AI:**
-1.  **Analyze Inputs:** Carefully read and understand the provided Research Findings, PRD, and TDD.
-2.  **Prioritize PRD/TDD:** Strictly adhere to the requirements, features, platform, UI concepts, and success metrics defined in the PRD. Strictly adhere to the tech stack, architecture, data flow, and implementation details specified in the TDD.
-3.  **Focus on MVP:** Implement *only* the features listed as 'Core Features' or 'Must-Have' in the PRD. Exclude anything marked as 'Out of Scope'.
-4.  **Use Research for Context:** Leverage the Deep Research Findings for contextual understanding, user perspective, or specific nuances where applicable, but do not let them override the PRD/TDD specifications.
-5.  **Generate Code:** Produce clean, well-commented, and runnable code for the complete MVP application according to the TDD specifications.
-6.  **Completeness:** Ensure all necessary code components (HTML, CSS, JS, Python, backend/frontend logic, etc., depending on the tech stack) are included for the application to run.
-7.  **Error Handling:** Implement basic error handling as described in the TDD/PRD.
-8.  **Comments:** Add clear comments explaining the code logic, especially for complex sections.
+
+1.  **Analyze Inputs:** Carefully read the provided Research Findings Summary and understand the referenced PRD and Tech Design Doc files.
+2.  **Prioritize PRD & Tech Design:** Strictly adhere to the requirements, features, platform, UI concepts, tech stack, architecture, data flow, and implementation details specified in the PRD and Tech Design Doc. If there's a conflict between the Research Summary and the PRD/Tech Design, the PRD/Tech Design take precedence.
+3.  **Use Research for Context:** Leverage the Deep Research Findings Summary for overall context, understanding user needs, and informing subtle implementation details where the PRD/Tech Design are not specific, but **do not** let it override explicit specifications in the PRD/Tech Design.
+4.  **Focus on MVP:** Implement *only* the features listed as 'Core Features' or 'Must-Have' in the PRD. Exclude anything marked as 'Out of Scope'.
+5.  **Generate Code:** Produce clean, well-commented, and runnable code for the complete MVP application according to the Tech Design Doc specifications. Use appropriate file blocks for each distinct file (e.g., HTML, CSS, Python script).
+6.  **Completeness:** Ensure all necessary code components are included for the application to run based on the specified tech stack.
+7.  **Error Handling:** Implement basic error handling as described in the Tech Design Doc/PRD.
+8.  **Comments:** Add clear comments explaining the code logic, especially for complex sections or non-obvious decisions.
 
 **Output:**
-* The complete source code for the MVP application, formatted correctly within a single code block.
-* Brief setup or running instructions *only if* absolutely necessary beyond standard practices for the specified tech stack.
+
+*   The complete source code for the MVP application, organized into separate file blocks (e.g., ```html name=index.html ... ```, ```python name=main.py ... ```).
+*   Brief setup or running instructions *only if* absolutely necessary beyond standard practices for the specified tech stack (e.g., specific API keys needed, non-standard build steps).
 
 ---
 
-**[ PASTE DEEP RESEARCH FINDINGS HERE ]**
+**Execution Request:**
 
-[ PASTE PRODUCT REQUIREMENTS DOCUMENT (PRD) HERE ]<User pastes the complete PRD generated in the previous step here>
-[ PASTE TECHNICAL DESIGN DOCUMENT (TDD) HERE ]<User pastes the complete TDD generated in the previous step here>
-AI Execution: Now, based on all
+Please generate the MVP application code based on the provided Research Summary and the referenced PRD and Tech Design Doc files. Remember to prioritize the PRD and Tech Design Doc for specific requirements and implementation details.
