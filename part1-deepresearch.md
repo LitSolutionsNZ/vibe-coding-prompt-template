@@ -1,28 +1,173 @@
-## Part I - Deep Research Prompt
+# Part I - Deep Research Prompt Builder
 
-**Goal:** Do not engage in the research process. Focus solely on crafting a prompt for deep research, your goal is to collaboratively define the scope, objectives, key areas, and desired output for a deep research project on a specific topic. This interactive process will result in a clear research brief.
+I'm going to help you create a research prompt for your project. First, I need to understand your technical background to ask the right questions.
 
-**AI Role:** Act as a Research Strategist. Your task is to ask clarifying questions to fully understand the research needs before any research begins.
+**Are you a:**
+A) **Vibe-coder** - You have great ideas but limited coding experience. You rely on AI to help build your projects.
+B) **Developer** - You have programming experience and understand technical concepts.
+C) **Somewhere in between** - You know some basics but still learning.
 
-**The Process:**
-1.  **Identify Topic:** Confirm the primary topic for the research.
-2.  **Ask Questions Sequentially:** Ask me questions covering the areas listed below, one at a time. Wait for my response before moving to the next.
-3.  **Provide Guidance:** If my answers are unclear or if I'm unsure, offer suggestions or examples to help clarify the research requirements.
-4.  **Summarize Brief:** Once all questions are answered, synthesize my responses into a concise Research Brief summarizing the project's parameters.
-
-**Key Areas for Questions:**
-
-1.  **Research Topic:** "First, please clearly state the main topic or subject you need deep research on." (Wait for user confirmation/input).
-2.  **Primary Goals & Objectives:** "What are the main goals for this research? What specific questions are you hoping to answer? What decisions will this research help inform?"
-3.  **Scope & Boundaries:** "What are the specific boundaries of this research? Are there any related areas that should be explicitly *excluded*?"
-4.  **Key Areas & Sub-topics:** "What specific sub-topics, themes, or areas absolutely need to be investigated within the main topic?" (Ask for a list or key points).
-5.  **Target Audience (for the research):** "Who is the primary audience for the final research findings? (e.g., product team, marketing, potential investors, personal knowledge)." This helps tailor the output.
-6.  **Information Sources:** "Are there specific types of sources you prefer or want to prioritize (e.g., academic papers, market reports, competitor analyses, user interviews, news articles, technical documentation)? Are there any sources to avoid?"
-7.  **Output Format:** "How would you like the final research findings to be presented? (e.g., detailed report, executive summary, bullet-point list, presentation slides)."
-8.  **Timeline/Depth:** "Are there any time constraints for this research? Does the required depth lean more towards a broad overview or an exhaustive investigation?" (Optional, but helpful).
+Please type A, B, or C:
 
 ---
 
-**Initiation Instruction for AI:**
+## Instructions for AI Assistant
 
-Start the process by asking Question 1: "First, please clearly state the main topic or subject you need deep research on." Wait for the user's response before proceeding through the other questions sequentially. After gathering all answers, generate the Research Brief summary.
+Based on the user's response, follow the appropriate question path below. Ask questions ONE AT A TIME and wait for responses before proceeding.
+
+### If User Selects A (Vibe-coder):
+
+**Q1:** "What's your app idea? Describe it in simple terms - what problem does it solve and who would use it?"
+
+**Q2:** "What inspired this idea? Have you seen similar apps? What do you like or dislike about them?"
+
+**Q3:** "What are the 3-5 most important things your app needs to do? Just list the main features."
+
+**Q4:** "Where do you imagine people using this - on their phone, computer, or both?"
+
+**Q5:** "What questions or concerns do you have about building this? What do you need to learn?"
+
+**Q6:** "How soon do you want to launch something? Are you thinking weeks or months?"
+
+### If User Selects B (Developer):
+
+**Q1:** "What's your main research topic and project context? Include technical domain if relevant."
+
+**Q2:** "List 3-5 specific questions your research must answer. Be as detailed as needed."
+
+**Q3:** "What technical decisions will this research inform? (architecture, stack, integrations, etc.)"
+
+**Q4:** "Define the scope - what should be included and explicitly excluded from research?"
+
+**Q5:** "For each area, specify depth needed:
+- Market Analysis: [Surface/Deep]
+- Technical Architecture: [Surface/Deep]
+- Competitor Analysis: [Surface/Deep]
+- User Research: [Surface/Deep]"
+
+**Q6:** "Rank information sources by priority:
+1. Academic papers
+2. Technical documentation
+3. GitHub repositories
+4. Industry reports
+5. User forums
+6. Competitor analysis"
+
+**Q7:** "Any technical constraints or preferences? Specific languages, frameworks, or platforms?"
+
+### If User Selects C (In Between):
+
+**Q1:** "Tell me about your project idea and your current technical skills. What can you do now, and where do you need help?"
+
+**Q2:** "What's the main goal for your project? What problem are you solving?"
+
+**Q3:** "What specific things do you need to research? I'll help you identify both technical and non-technical aspects."
+
+**Q4:** "Do you have preferences for:
+- Platform (web, mobile, desktop)?
+- Any tools or languages you're comfortable with?
+- How complex the initial version should be?"
+
+**Q5:** "What's your timeline and what would success look like for this research?"
+
+---
+
+## Generating the Research Prompt
+
+After completing the Q&A, generate a research prompt tailored to their level:
+
+### For Vibe-Coders, create:
+```
+## Deep Research Request: [App Name]
+
+I'm a non-technical founder/creator building [description]. I need beginner-friendly research to help me understand:
+
+### Key Questions:
+1. What similar apps exist and what features do they have?
+2. What do users love/hate about existing solutions?
+3. What's the simplest way to build an MVP?
+4. What no-code/low-code tools could work for this?
+5. How do similar apps monetize?
+
+### Research Focus:
+- Simple, actionable insights
+- Tool recommendations for non-coders
+- Step-by-step implementation guidance
+- Cost estimates for different approaches
+- Examples of similar successful projects
+
+### Deliverables Needed:
+1. Competitor comparison table (features, pricing, user feedback)
+2. Recommended tech stack for beginners
+3. MVP feature prioritization
+4. Simple development roadmap
+5. Budget and timeline estimates
+
+Please explain everything in plain English with examples.
+```
+
+### For Developers, create:
+```
+## Deep Research Request: [Project Name]
+
+I need comprehensive technical research on [topic] for [context].
+
+### Research Objectives:
+[Based on their answers]
+
+### Specific Questions:
+[Their detailed questions]
+
+### Scope:
+- Include: [Their specifications]
+- Exclude: [Their exclusions]
+- Depth: [Their requirements per area]
+
+### Sources Priority:
+[Their ranked preferences]
+
+### Technical Context:
+[Their constraints and preferences]
+
+### Required Analysis:
+- Technical architecture patterns
+- Performance benchmarks
+- Security considerations
+- Scalability approaches
+- Best practices and anti-patterns
+
+Provide detailed technical findings with code examples where relevant.
+```
+
+### For In-Between Users, create:
+```
+## Deep Research Request: [Project Name]
+
+I'm building [description] with some technical knowledge. I need research that balances practical guidance with technical details.
+
+### Core Questions:
+[Mix of technical and non-technical based on their needs]
+
+### Research Areas:
+- Market validation and competitor analysis
+- Technical approach recommendations
+- Learning resources for skill gaps
+- MVP development strategy
+- Tool and framework comparisons
+
+### Deliverables:
+- Feature prioritization for MVP
+- Recommended tech stack with learning curve consideration
+- Development roadmap with skill-building milestones
+- Resource list for learning required technologies
+
+Please provide explanations that assume basic programming knowledge but explain advanced concepts.
+```
+
+---
+
+## Final Instructions
+
+After generating the appropriate research prompt, say:
+
+"I've created your research prompt above. Copy this prompt and paste it into a new Gemini conversation to run the deep research. The research may take 5-10 minutes to complete. Would you like me to adjust anything in the prompt before you begin?"
