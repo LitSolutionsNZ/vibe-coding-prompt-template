@@ -1,82 +1,176 @@
-# Development Workflow: Gemini + AI IDE Agent
+# 🚀 Vibe-Coding Workflow: AI-Powered MVP Development
 
-This guide details a structured workflow using Google’s Gemini tools and an AI-powered IDE Agent (like GitHub Copilot Chat in VS Code, Cursor, etc.) to define, plan, generate, and refine an application MVP. This workflow utilizes specific prompt templates provided in this repository (`part1-deepresearch.md`, `part2-interactive-prd-tech-design.md`, `part3-generate-notes-for-agent.md`).
+Build your MVP in hours, not months! This workflow guides you through creating a fully-documented, AI-generated application using Gemini and your favorite AI IDE.
 
-## Workflow Overview
+## 🎯 What This Does
 
-1.  **Generate Deep Research (Gemini Website):** Use `part1-deepresearch.md` to create a research prompt on your topic for you to use on the [Gemini Website](https://gemini.google.com/app). Capture the key findings/summary.
-2.  **Generate PRD & Tech Design Doc (Gemini App / AI Studio):** Use `part2-interactive-prd-tech-design.md` to produce the MVP’s Product Requirements Document (PRD) and Technical Design Document (Tech Design Doc) as separate files (e.g., `PRD-MVP.txt`, `Tech-Design-MVP.txt`).
-3.  **Generate IDE Agent Guide (`NOTES.md`) (Gemini App / AI Studio):** Use `part3-generate-notes-for-agent.md`. Provide it with the PRD, Tech Design Doc files from Step 2, and the key findings from the deep research in Step 1. Gemini will generate a structured `NOTES.md` file designed to guide the IDE agent.
-4.  **Setup Project & Prompt IDE Agent (AI IDE):** Set up your local project, including the PRD, Tech Design Doc, and the `NOTES.md` generated in Step 3. Activate your IDE Agent and provide an initial prompt instructing it to build the MVP based on these files.
-5.  **Supervise Agent Code Generation (AI IDE):** Monitor the IDE agent as it generates the initial codebase, creates files, and follows the plan in `NOTES.md`. Provide clarifications as needed via the agent's chat interface.
-6.  **Setup & Validation (AI IDE):** Once the agent completes the initial build, install dependencies, run smoke tests, and ensure the basic structure is functional. Commit the initial code.
-7.  **Refine & Iterate Code (AI IDE):** Use the IDE agent or standard AI assistance (like Copilot suggestions) to debug, refactor, add tests, enhance features, and ensure the code meets all requirements, referencing the PRD, Tech Design Doc, and `NOTES.md`.
+Transform your app idea into working code through 4 structured steps:
+1. **Research** → Understand the market and technical landscape
+2. **Define** → Create clear product requirements (PRD)
+3. **Design** → Plan the technical implementation
+4. **Build** → Generate code with AI assistance
+
+## ✅ Prerequisites
+
+- **AI Platform Access**: Any advanced LLM service:
+  - AI Studio (studio.google.com) - Recommended for generous free limits
+  - Google Gemini (gemini.google.com)
+  - Claude (claude.ai) 
+  - ChatGPT Plus (chat.openai.com)
+  - Or any LLM with reasoning capabilities
+
+- **AI-Enabled IDE**: One of these:
+  - VS Code + GitHub Copilot extension
+  - Cursor (cursor.sh)
+  - Windsurf (codeium.com/windsurf)
+  - Any IDE with AI chat/completion features
+
+- **Basic Tools**: 
+  - Web browser
+  - Text editor (to save generated documents)
+  - Git (optional, but recommended for version control)
+
+- **Experience Level**: 
+  - No coding required for vibe-coders!
+  - Some programming knowledge helpful but not necessary
+  - Developers can use advanced features
+
+## 📋 The 4-Step Workflow
+
+### Step 1: Deep Research 🔍
+**Time:** 20-30 minutes  
+**Tool:** Any advanced LLM (AI Studio recommended for free limits)  
+**Output:** Research findings document
+
+1. Copy the entire content of `part1-deepresearch.md`
+2. Paste into your preferred AI platform (AI Studio, Gemini, Claude, GPT)
+3. Answer the questions to build your research prompt
+4. Run the generated prompt for comprehensive research
+5. Save results as `research-[YourAppName].txt`
+
+### Step 2: Product Requirements (PRD) 📝
+**Time:** 15-20 minutes  
+**Tool:** Gemini  
+**Output:** PRD document
+
+1. Copy the entire content of `part2-prd-generator.md`
+2. Start a new Gemini chat and paste it
+3. Attach your research findings when prompted
+4. Answer questions about your product vision
+5. Save the generated PRD as `PRD-[YourAppName]-MVP.md`
+
+### Step 3: Technical Design 🏗️
+**Time:** 15-20 minutes  
+**Tool:** Gemini  
+**Output:** Technical Design document
+
+1. Copy the entire content of `part3-tech-design-generator.md`
+2. Start a new Gemini chat and paste it
+3. Attach your PRD (required) and research (optional)
+4. Answer technical approach questions
+5. Save as `TechDesign-[YourAppName]-MVP.md`
+
+### Step 4: Generate AI Agent Instructions 🤖
+**Time:** 5-10 minutes  
+**Tool:** Gemini  
+**Output:** NOTES.md for your AI IDE
+
+1. Copy the entire content of `part4-generate-notes-for-agent.md`
+2. Start a new Gemini chat and paste it
+3. Attach your PRD and Technical Design documents
+4. Save the generated content as `NOTES.md`
+
+### Step 5: Build with AI IDE 💻
+**Time:** 1-3 hours (depending on complexity)  
+**Tool:** Your AI-enabled IDE  
+**Output:** Working MVP code!
+
+1. Create a new project folder
+2. Add all generated documents (PRD, TechDesign, NOTES.md)
+3. Open in your AI IDE
+4. Start with this prompt:
+   ```
+   Please read NOTES.md in the project root, then begin building the MVP 
+   following the instructions there. Start with the project setup phase.
+   ```
+5. Work alongside the AI as it generates code
+6. Test frequently and provide feedback
+
+## 🎨 Choose Your Path
+
+This workflow adapts to your experience level:
+
+### 🌟 Vibe-Coders (No/Low Code Experience)
+- Get no-code tool recommendations
+- Simple explanations throughout
+- Focus on ideas over implementation
+- AI handles all the technical details
+
+### 💻 Developers
+- Full technical specifications
+- Architecture patterns and best practices
+- Detailed implementation guides
+- Advanced customization options
+
+### 🎓 Learners (Some Experience)
+- Balance of guidance and technical depth
+- Learning resources included
+- Code explanations to build skills
+- Growth-oriented approach
+
+## 📁 Project Structure
+
+After completing all steps, your project should look like:
+```
+your-app/
+├── docs/
+│   ├── research-YourApp.txt
+│   ├── PRD-YourApp-MVP.md
+│   └── TechDesign-YourApp-MVP.md
+├── NOTES.md
+├── README.md (created by AI)
+├── [source code files generated by AI]
+└── [configuration files]
+```
+
+## 💡 Pro Tips
+
+### For Best Results:
+- **Be specific** in your answers - details help AI understand your vision
+- **Start simple** - you can always add features later
+- **Test often** - run the code after each major feature
+- **Ask why** - if you don't understand something, ask the AI to explain
+
+### Common Pitfalls to Avoid:
+- Don't skip the research phase - it provides crucial context
+- Don't add too many features to MVP - keep it minimal
+- Don't worry about perfect code - focus on working code first
+- Don't hesitate to regenerate if something seems off
+
+## 🚨 Troubleshooting
+
+### "Gemini is trying to do research instead of creating a prompt"
+→ Make sure you're in regular Gemini, not Deep Research mode for steps 2-4
+
+## 🤝 Contributing
+
+Found ways to improve this workflow? Please contribute!
+- Submit issues for problems you encounter
+- Share success stories and examples
+- Propose prompt improvements
+- Add new use cases
+
+## 📜 License
+
+MIT License - see LICENSE file
+
+## ☕ Support
+
+If this workflow helped you build something awesome:
+- ⭐ Star this repo
+- 🐦 Share your success on social media
+- ☕ [Buy me a coffee](https://www.buymeacoffee.com/alpyalayg)
 
 ---
-## Recommended LLMs:
 
-* For Deep Research: Gemini Deep Research with 2.5 Pro (or latest powerful model)
-* For PRD/Tech Design Doc/NOTES.md Generation: Gemini 2.5 Pro (or latest powerful model)
-* For Code Generation/Refinement: Your IDE's integrated AI Agent (Copilot Chat, Cursor, etc.)
-
-## Step 1: [Generate Deep Research (Gemini Website)](https://github.com/KhazP/vibe-coding-prompt-template/blob/main/part1-deepresearch.md)
-
-* ### Disclaimer: If Gemini attempts to create a deep research report with **`part1-deepresearch.md`** prompt, press **Try again without Deep Research** below the Deep Research window.
-* Use the [Gemini Website](https://gemini.google.com/app) with the **`part1-deepresearch.md`** prompt template.
-* Follow the instructions within the prompt to define your research scope collaboratively, and complete the Q&A process.
-* After creating a Deep Research prompt with the Q&A process done, run the resulting research prompt on Gemini.
-* **Save the key findings** from the deep research output (e.g., as `Deep-Research-Summary.txt`).
-
----
-
-## Step 2: [Generate PRD & Tech Design Doc (Gemini App / AI Studio)](https://github.com/KhazP/vibe-coding-prompt-template/blob/main/part2-interactive-prd-tech-design.md)
-
-1.  Execute the **`part2-interactive-prd-tech-design.md`** prompt template in Gemini App or aistudio.google.com. Complete the Q&A process.
-2.  Review the generated PRD and Tech Design Doc for accuracy.
-3.  **Save the output from the prompts as separate txt files** (e.g., `PRD-MVP.txt` and `Tech-Design-MVP.txt`) in your planned project directory.
-
----
-
-## Step 3: [Generate IDE Agent Guide (`NOTES.md`) (Gemini App / AI Studio)](https://github.com/KhazP/vibe-coding-prompt-template/blob/main/part3-generate-notes-for-agent.md)
-
-1.  Use the **`part3-generate-notes-for-agent.md`** prompt template in Gemini App or AI Studio.
-2.  **Configure the Prompt:** Update the filename placeholders within the prompt to match the actual names of your PRD and Tech Design Doc files saved in Step 2.
-3.  **Execute Prompt:** Run the complete prompt, providing the PRD (`PRD-MVP.txt`), Tech Design Doc (`Tech-Design-MVP.txt`), and the saved deep research findings (e.g., `Deep-Research-Summary.txt`) as attachments.
-4.  **Review & Save:** Gemini will generate the content for `NOTES.md`. Review it for clarity and accuracy. Save this content as `NOTES.md` in your project directory alongside the PRD and Tech Design Doc.
-5.  **Commit Planning Files:** Commit `PRD-MVP.txt`, `Tech-Design-MVP.txt`, `Deep-Research-Summary.txt`, and `NOTES.md` to your GitHub repository.
-
-*Goal: Create a comprehensive guide (`NOTES.md`) derived from the PRD/Tech Design Doc, specifically structured to instruct the AI IDE agent.*
-
----
-
-## Step 4: Setup Project & Prompt IDE Agent (AI IDE)
-
-1.  **Setup:** Clone your repository (`git clone ...`) to your local machine. Ensure `PRD-MVP.txt`, `Tech-Design-MVP.txt`, `Deep-Research-Summary.txt`, and `NOTES.md` are present in the project root. Set up your basic project environment if needed (e.g., `virtualenv`, `npm init`).
-2.  **Activate IDE Agent:** Open your project in your AI-powered IDE (VS Code with Copilot Chat, Cursor, etc.). Activate the chat or agent feature.
-3.  **Craft Initial Prompt for Agent:** Provide a clear starting prompt to the agent. This prompt is crucial. Example structure:
-
-    ```text
-    Please generate the initial MVP codebase for the '[App Name]' project.
-
-    Your primary instructions and plan are in the `NOTES.md` file in the project root. Please read it carefully first.
-
-    You MUST adhere to the detailed requirements specified in `PRD-MVP.txt` and the technical implementation details outlined in `Tech-Design-MVP.txt`. `NOTES.md` provides a summary and plan based on these files. Additional context may be available in `Deep-Research-Summary.txt`.
-
-    Start by creating the main application file (e.g., `app.py`, `main.js`) and the basic project structure outlined in the Tech Design Doc or `NOTES.md`.
-
-    Let me know if you have any questions before you begin generating the files.
-    ```
-    *(Adapt the filenames and starting file as needed based on your project)*
-
-4.  **Send Prompt:** Execute the prompt in the agent's interface.
-
-*Goal: Initiate the code generation process by instructing the IDE agent using the prepared planning documents.*
-
----
-
-## Tips for Success
-
-* **Quality of Inputs is Key:** The better the PRD, Tech Design Doc, and the resulting `NOTES.md`, the better the IDE agent's initial code generation will be.
-* **Use a Model with Large Context Window:** Try to use models with large context windows like Claude 3.7 Sonnet Thinking, Gemini 2.5 Pro, and such.
-* **Break Down Complex Tasks:** If the agent struggles with the entire MVP at once, prompt it to generate specific parts or features sequentially based on the plan in `NOTES.md`.
-
+**Remember:** The goal isn't perfect code on the first try. It's getting a working MVP that you can iterate on. Every app starts somewhere - yours starts here! 🚀
