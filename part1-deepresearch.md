@@ -3,9 +3,9 @@
 I'm going to help you create a research prompt for your project. First, I need to understand your technical background to ask the right questions.
 
 **Are you a:**
-A) **Vibe-coder** - You have great ideas but limited coding experience. You rely on AI to help build your projects.
-B) **Developer** - You have programming experience and understand technical concepts.
-C) **Somewhere in between** - You know some basics but still learning.
+- A) **Vibe-coder** - You have great ideas but limited coding experience
+- B) **Developer** - You have programming experience  
+- C) **Somewhere in between** - You know some basics but still learning
 
 Please type A, B, or C:
 
