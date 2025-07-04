@@ -12,6 +12,20 @@
 
 ---
 
+## Quick Start TLDR
+ChatGPT or whatever you code with: 
+
+1) Drag the first doc into your prompt window
+Follow the attached promp
+
+2) Do the same for the other docs - Rinse and Repeat
+
+3) Make the App:
+a) Web - See Web\Web-Process.md
+b) Mobile App - See Mobile\Android-Process.md
+
+
+
 ## 🎯 What This Does
 Turn any app idea into working code through 4 AI-powered stages:
 
